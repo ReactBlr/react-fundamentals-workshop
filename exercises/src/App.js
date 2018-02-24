@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import JSX from './exercises/jsx'
-import Components from './exercises/components'
+import BasicComponents from './exercises/basic-components'
+import Props from './exercises/props'
+import State from './exercises/state'
+import Children from './exercises/children'
 
 class App extends Component {
   render() {
@@ -11,12 +14,18 @@ class App extends Component {
           <div className="sidebar">
             <ul>
               <li><Link to='/'>JSX</Link></li>
-              <li><Link to='/components'>Basic Components</Link></li>
+              <li><Link to='/basic-components'>Basic Components</Link></li>
+              <li><Link to='/props'>Props</Link></li>
+              <li><Link to='/state'>State</Link></li>
+              <li><Link to='/children'>children</Link></li>
             </ul>
           </div>
           <div className="content">
             <Route exact path='/' component={JSX} />
-            <Route path='/components' component={Components} />
+            <Route path='/basic-components' component={BasicComponents} />
+            <Route path='/props' component={Props} />
+            <Route path='/state' component={State} />
+            <Route path='/children' component={Children} />
           </div>
         </div>
       </Router>
