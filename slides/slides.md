@@ -468,6 +468,21 @@ this.setState((prevState, props) => ({
 
 ---
 
+### Events
+* onClick
+* onMouseEnter
+* onMouseLeave
+* onChange
+* onSubmit
+* etc
+
+
+### Events
+* e.preventDefault
+* e.target.value
+
+---
+
 ### this.props.children
 * In Page Component
   * this.props.title is 'Home'
