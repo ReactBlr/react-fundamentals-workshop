@@ -18,7 +18,7 @@ class App extends Component {
               <li><Link to='/basic-components'>Basic Components</Link></li>
               <li><Link to='/props'>Props</Link></li>
               <li><Link to='/state'>State</Link></li>
-              <li><Link to='/children'>children</Link></li>
+              <li><Link to='/children'>Children</Link></li>
               <li><Link to='/events'>Events</Link></li>
             </ul>
           </div>
