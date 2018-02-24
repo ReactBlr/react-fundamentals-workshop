@@ -5,6 +5,7 @@ import BasicComponents from './exercises/basic-components'
 import Props from './exercises/props'
 import State from './exercises/state'
 import Children from './exercises/children'
+import Events from './exercises/events'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
               <li><Link to='/props'>Props</Link></li>
               <li><Link to='/state'>State</Link></li>
               <li><Link to='/children'>children</Link></li>
+              <li><Link to='/events'>Events</Link></li>
             </ul>
           </div>
           <div className="content">
@@ -26,6 +28,7 @@ class App extends Component {
             <Route path='/props' component={Props} />
             <Route path='/state' component={State} />
             <Route path='/children' component={Children} />
+            <Route path='/events' component={Events} />
           </div>
         </div>
       </Router>
