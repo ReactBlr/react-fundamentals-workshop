@@ -9,7 +9,7 @@ function FruitList(props) {
 }
 
 function Button(props) {
-
+  return null
 }
 
 function PropExamples() {

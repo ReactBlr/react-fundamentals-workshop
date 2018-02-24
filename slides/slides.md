@@ -468,6 +468,30 @@ this.setState((prevState, props) => ({
 
 ---
 
+### this.props.children
+* In Page Component
+  * this.props.title is 'Home'
+  * this.props.children is descriptors of Header, Content, Footer
+
+```
+  <Page title='Home'>
+    <Header />
+    <Conent />
+    <Footer />
+  </Page>
+```
+
+---
+
+### React.Children
+* React.Children provides utilities for dealing with the this.props.children opaque data structure
+* React.Children.map
+* React.Children.forEach
+* React.Children.count
+* React.Children.only
+
+---
+
 ### Life cycle method
 * We need to update time every second
 * What is the best place to write this logic ?
