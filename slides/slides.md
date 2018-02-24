@@ -1,3 +1,66 @@
+### React Fundamentals Workshop
+
+Kiran Abburi
+
+[@kiran_abburi](https://twitter.com/kiran_abburi)
+
+---
+
+### Setup
+
+```
+git clone https://github.com/ReactBangalore/react-fundamentals-workshop
+cd exercises
+npm install
+npm start
+```
+
+---
+
+### Create React App
+* Starter kit for react
+* Needn't worry about babel and webpack configuration
+
+```
+npm install -g create-react-app
+create-react-app myapp
+cd myapp
+npm start
+```
+
+---
+
+### React Hello world
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
+---
+
+### React Hello world
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function App() {
+  return <h1>Hello, world!</h1>
+}
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+```
+
+---
+
 ### JSX
 * JSX is syntax extension to JavaScript
 * It looks like XML/HTML
