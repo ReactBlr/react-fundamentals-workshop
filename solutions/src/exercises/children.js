@@ -1,11 +1,17 @@
 import React from 'react'
 
 function FirstChild(props) {
-  return null
+  return (
+    <div>{props.children[0]}</div>
+  )
 }
 
 function List(props) {
-  return null
+  return (
+    <div>
+      {React.Children.map(props.children, (child, i) => [child, <hr />])}
+    </div>
+  )
 }
 
 function ChildrenExamples() {
@@ -24,7 +30,6 @@ function ChildrenExamples() {
         <p>Two</p>
         <p>Three</p>
       </List>
-      <hr />
     </div>
   )
 }

@@ -1,31 +1,38 @@
 import React from 'react'
 
-const sleep = (timeout) => new Promise(resolve => setTimeout(resolve, timeout))
-
-class LifeCycleMethods extends React.Component {
+class Posts extends React.Component {
   constructor() {
     super()
     this.state = {
-      posts: null
+      posts: []
     }
   }
   componentDidMount = () => {
-    fetch("https://jsonplaceholder.typicode.com/posts").then(res => res.json()).then(res => sleep(4000).then(() => this.setState({posts: res})))
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then(res => res.json())
+      .then((res) => this.setState({posts: res}))
   }
   render() {
     const {posts} = this.state
     return (
       <div>
-        {posts && posts.length
-          ? posts.map(post => <div key={post.id} style={{
-            margin: "10px"
-          }}>{post.body}</div>)
-          : "Loading..."
-}
+        {posts.map(post => <div key={post.id} style={{
+          margin: "10px"
+        }}>{post.body}</div>)}
       </div>
     )
   }
 
+}
+
+export function LifeCycleMethods() {
+  return (
+    <div>
+      <p>Fetch posts from <a href="https://jsonplaceholder.typicode.com/posts">here</a> and render it</p>
+      <Posts />
+      <hr />
+    </div>
+  )
 }
 
 export default LifeCycleMethods

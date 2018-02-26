@@ -13,9 +13,17 @@ function FruitList(props) {
 }
 
 function Button(props) {
+  let backgroundColor;
+  if (props.type === 'success') {
+    backgroundColor = 'green'
+  } else if (props.type === 'error') {
+    backgroundColor = 'red'
+  } else {
+    backgroundColor = 'white'
+  }
   return (
     <button style={
-      {backgroundColor: props.type === 'success' ? 'green' : 'red'}
+      {backgroundColor}
     }>
       {props.children}
     </button>
@@ -37,7 +45,7 @@ function PropExamples() {
       <p>Red background for type = error</p>
       <Button type='error'>Success button</Button>
       <hr />
-      
+
     </div>
   )
 }

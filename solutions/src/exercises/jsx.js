@@ -1,11 +1,5 @@
 import React from 'react'
 
-class ABC extends React.Component {
-  render() {
-    return (<div />)
-  }
-}
-
 function FullName() {
   const firstName = "John"
   const lastName = "Doe"
